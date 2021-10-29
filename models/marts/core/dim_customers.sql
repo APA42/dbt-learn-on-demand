@@ -1,9 +1,3 @@
-
--- to create a table instead a view
-{{ config(
-    materialized="table"
-)}}
-
 -- Use other modules (stages)
 with customers as (
     select * from {{ ref('stg_customers') }}
