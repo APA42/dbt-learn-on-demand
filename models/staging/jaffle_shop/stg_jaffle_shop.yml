@@ -7,3 +7,9 @@ models:
         tests:
           - unique
           - not_null
+  - name: stg_orders
+    columns:
+      - name: status
+        tests:
+        - accepted_values:
+            values: ['completed', 'shipped', 'returned', 'placed', 'return_pending']
